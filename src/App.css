@@ -1,38 +1,105 @@
-.App {
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.hero {
+  background-image: url('/fastenerimage.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .overlay {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.contact {
+  background-color: black;
+  color: white;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contact p {
+  margin-bottom: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contact form {
+  max-width: 600px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1rem;
+}
+
+.contact input,
+.contact textarea {
+  background: black;
   color: white;
+  border: 1px solid gray;
+  padding: 1rem;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.contact .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact button {
+  background: white;
+  color: black;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.caret {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateX(-50%) translateY(10px);
   }
 }
+
