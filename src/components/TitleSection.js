@@ -1,8 +1,8 @@
-// src/components/HeroSection.js
+// src/components/TitleSection.js
 import React from 'react';
 import { FaChevronDown } from 'react-icons/fa'; // npm install react-icons
 
-const HeroSection = () => {
+const TitleSection = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -23,4 +23,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default TitleSection;
